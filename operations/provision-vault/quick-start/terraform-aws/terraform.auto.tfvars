@@ -1,23 +1,23 @@
 # ---------------------------------------------------------------------------------------------------------------------
 # General Variables
 # ---------------------------------------------------------------------------------------------------------------------
-# name      = "vault-quick-start"
+name      = "vault-quick-start"
 # ami_owner = "099720109477" # Base image owner, defaults to RHEL
 # ami_name  = "*ubuntu-xenial-16.04-amd64-server-*" # Base image name, defaults to RHEL
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Network Variables
 # ---------------------------------------------------------------------------------------------------------------------
-# vpc_cidr          = "172.19.0.0/16"
-# vpc_cidrs_public  = ["172.19.0.0/20", "172.19.16.0/20", "172.19.32.0/20",]
-# vpc_cidrs_private = ["172.19.48.0/20", "172.19.64.0/20", "172.19.80.0/20",]
+vpc_cidr          = "172.19.0.0/16"
+vpc_cidrs_public  = ["172.19.0.0/20", "172.19.16.0/20", "172.19.32.0/20",]
+vpc_cidrs_private = ["172.19.48.0/20", "172.19.64.0/20", "172.19.80.0/20",]
 
-# nat_count        = 1 # Number of NAT gateways to provision across public subnets, defaults to public subnet count.
+ nat_count        = 1 # Number of NAT gateways to provision across public subnets, defaults to public subnet count.
 # bastion_servers  = 0 # Number of bastion hosts to provision across public subnets, defaults to public subnet count.
 # bastion_instance = "t2.micro"
 # bastion_image_id = "" # AMI ID override, defaults to base RHEL AMI
 
-# network_tags = {"owner" = "hashicorp", "TTL" = "24"}
+network_tags = {"owner" = "hashicorp", "TTL" = "24"}
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Consul Variables
@@ -30,7 +30,7 @@
 
 # If 'consul_public' is true, assign a public IP, open port 22 for public access, & provision into
 # public subnets to provide easier accessibility without a Bastion host - DO NOT DO THIS IN PROD
-# consul_public = true
+consul_public = true
 
 # consul_server_config_override = <<EOF
 # {
@@ -64,7 +64,7 @@
 
 # If 'vault_public' is true, assign a public IP, open port 22 for public access, & provision into
 # public subnets to provide easier accessibility without a Bastion host - DO NOT DO THIS IN PROD
-# vault_public = true
+vault_public = true
 
 # vault_server_config_override = <<EOF
 # # These values will override the defaults
